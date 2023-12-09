@@ -12,7 +12,7 @@ var red = 12
 var green = 13
 var blue = 14
 
-func processLines(path string, processLine func(string)) {
+func processLinesDay2(path string, processLine func(string)) {
 	file, err := os.Open(path)
 	if err != nil {
 		fmt.Println("Error opening file:", err)
@@ -46,7 +46,7 @@ func PossibleGamesSum(path string) int {
 		}
 	}
 
-	processLines(path, processLine)
+	processLinesDay2(path, processLine)
 
 	return sum
 }
@@ -79,7 +79,7 @@ func TotalPower(path string) int {
 		totalPower += setPower(line, "red", red)
 	}
 
-	processLines(path, processLine)
+	processLinesDay2(path, processLine)
 
 	return totalPower
 }
